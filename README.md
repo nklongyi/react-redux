@@ -2,7 +2,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Using [AntD](https://ant.design)
 Using [React-js](https://reactjs.org/) 
 
-## Available Scripts
+本项目为理解原生redux的原理所建，并非是react-redux的项目的使用手册。react-redux提供了很多方便的功能，但是其基础依然是redux核心提供的能力。
+
+[![QLzkVA.md.jpg](https://s2.ax1x.com/2019/12/20/QLzkVA.md.jpg)](https://imgchr.com/i/QLzkVA)
+
+按照后端的思维模式去理解：
+Store：有点类似于MVC模式中的控制中心，dispatch、subscribe能力都是由store提供；
+Reducers：则相当于service层，负责具体的事件处理和反馈，处理的结果return给store进行next handle，是一个纯函数，两个参数state、action，处理后返回new state。
+Action：事件的定义，事件可以包含类型（required）、内容（比如赋值等）。
+
+
+## 开始运行
 
 In the project directory, you can run:
 
@@ -14,30 +24,18 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `yarn test`
+执行效果如下：
+[![QOS0l8.md.jpg](https://s2.ax1x.com/2019/12/20/QOS0l8.md.jpg)](https://imgchr.com/i/QOS0l8)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+输入->增加，会在todolist增加内容
+点击列表项会自动删除内容
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+如果想暴露webpack的配置，自定义配置信息，可以执行以下命令
 
 ### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Note: 自定义antd的样式引入形式和按需加载的模式**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Learn More
 
@@ -45,26 +43,3 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

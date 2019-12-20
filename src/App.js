@@ -45,11 +45,9 @@ class TodoList extends React.Component{
                 <Input placeholder="todo info" value={this.state.inputValue} onChange={(e)=>this.inputValueChange(e)}></Input>
                 </Col>
                 <Col span={6}>
-                  <Button type="primary" onClick={this.handleAddItem}>增加</Button>
+                  <Button type="primary" onClick={this.handleAddItem} style={{marginLeft:10}}>增加</Button>
                 </Col>
-              </Row>
-              <Row>
-                  <Col>
+                <Col  span={18}>
                   <List
                           bordered
                           dataSource={this.state.list}
@@ -57,6 +55,9 @@ class TodoList extends React.Component{
                         />
                   </Col>
               </Row>
+       
+                  
+      
               
             </Card>
           </Col>
